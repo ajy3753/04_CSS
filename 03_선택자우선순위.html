@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>선택자 우선 순위</title>
+
+   <style>
+      h1 {
+         background-color: palevioletred;
+      }
+
+      /* 순서대로 적용되기에, h1의 배경색은 plum이 된다. */
+      h1 {
+         background-color: plum;
+      }
+
+      #id1 {
+         background-color: cadetblue;
+      }
+
+      /* 아이디 선택자가 우선되므로, 클래스 선택자의 css는 적용되지 않는다. */
+      .cl1 {
+         background-color: aqua;
+         color: blue;
+      }
+
+      /* 태그 선택자 보다 클래스 선택자가 우선되므로, 배경색은 바뀌지 않으나 !important로 인해 글자색은 바뀐다. */
+      div {
+         background-color: coral;
+         color: blueviolet !important;
+      }
+   </style>
+</head>
+<body>
+   <h1>선택자 우선 순위</h1>
+   <p>
+      기본적으로 css는 위에서부터 아래로 순차적으로 적용된다. <br>
+      동일한 요소를 다양한 선택자로 css를 부여한 경우, 우선 순위에 따라 결정된다. <br>
+      태그 선택자 -> 클래스 선택자 -> 아이디 선택자 -> 인라인 스타일 방식 -> !important
+   </p>
+
+   <div id="id1" class="cl1">우선 순위 테스트</div>
+   <div>우선 순위 테스트</div>
+</body>
+</html>

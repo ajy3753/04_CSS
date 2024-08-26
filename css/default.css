@@ -1,0 +1,129 @@
+/* CSS 영역 */
+
+/* 1. 속성 선택자 */
+div {
+   background-color: beige;
+}
+
+/* div 요소들 중 name 속성값이 name1과 "일치"하는 요소 선택 */
+div[name=name1] {
+   background-color: aquamarine;
+}
+
+/* div 요소들 중 name 속성값이 name1이 "포함"되어있는 요소 */
+div[name~=name1] {
+   font-weight: bold;
+}
+
+/* div 요소들 중 class 속성값이 class로 "시작"되는 요소 (하이픈 - 으로 구분) */
+div[class|=class] {
+   color: red;
+}
+
+/* div 요소들 중 name 속성값이 na로 "시작"하는 요소 */
+div[name^=na] {
+   background-color: cadetblue;
+}
+
+/* div 요소들 중 class 속성값이 ss로 "끝나는" 요소 */
+div[class$=ss] {
+   color: white;
+}
+
+/* div 요소들 중 class 속성값이 i가 "포함"되어있는 요소 */
+div[class*=i] {
+   background-color: coral;
+   color: teal;
+}
+
+/*
+   [문제]
+   class 속성값이 div-class인 요소들 중에서 name 속성값에 name3가 포함된 요소의 배경을 pink로 바꿔라
+*/
+.div-class[name~=name3] {
+   background-color: pink;
+}
+
+
+/* 2. 자식 선택자와 후손 선택자 */
+/* a > b : a 요소의 자식들 중에서 b 요소만 전부 선택 */
+
+/* 아이디가 test1인 요소들의 자식들 중 h4만 선택 */
+#test1 > h4 {
+   color: hotpink;
+}
+
+/* 아이디가 test1인 요소들의 자식들 중 ul의 자식 li만 선택 */
+#test1 > ul > li {
+   color: cornflowerblue;
+}
+
+/* a b : a 요소의 후손들 중에서 b 요소 전부 선택 */
+#test1 li {
+   background-color: honeydew;
+}
+
+
+/* 3. 동위 선택자 */
+#test2 + div {
+   background-color: yellowgreen;
+}
+
+/* test2의 바로 뒤에 위치한 요소가 아니므로, style이 적용되지 않는다. */
+#test2 + ul {
+   background-color: aqua;
+}
+
+#test2 ~ div {
+   color: seagreen;
+}
+
+#test2 ~ ul {
+   color: blue;
+}
+
+
+/* 4. 반응 선택자 */
+.area {
+   background-color: teal;
+   width: 100px;
+   height: 100px;
+   cursor: pointer;
+}
+
+#active-test:active {
+   background-color: indianred;
+   color: firebrick;
+}
+
+#hover-test:hover {
+   background-color: lightseagreen;
+   color: aliceblue;
+   scale: 0.98;
+}
+
+
+/* 5. 상태 선택자 */
+input[type=checkbox]:checked {
+   width: 20px;
+   height: 20px;
+}
+
+input[type=checkbox]:checked + label {
+   font-size: 20px;
+}
+
+input[name^=user]:focus {
+   background-color: orchid;
+}
+
+button:enabled {
+   background-color: palegreen;
+   cursor: pointer;
+}
+
+button:disabled {
+   background-color: brown;
+   opacity: 1 ;
+   color: goldenrod;
+}
