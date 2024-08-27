@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>텍스트 관련 스타일</title>
+
+   <style>
+      #c1 { color: red; }
+      #c2 { color: #0090FF }
+      #c3 { color: rgb(50, 196, 62); }
+      #c4 { color: rgba(250, 0, 208, 0.5);}
+
+      #td1 { text-decoration: underline; }
+      #td2 { text-decoration: line-through; }
+      #td3 { text-decoration: overline; }
+   </style>
+</head>
+<body>
+   <h1>텍스트 관련 스타일 (text~)</h1>
+
+   <h2>color : 텍스트 색상 지정</h2>
+   <pre>
+      선택자 {
+         color: 색상명 | #16진수(코드값) | rgb(x, x, x) | rgba(x, x, x, x);
+      }
+   </pre>
+
+   <p id="c1">color : red</p>
+   <p id="c2">color : #0090FF</p>
+   <p id="c3">color : rgb(50, 196, 62)</p>
+   <p id="c4">color : rgba(250, 0, 208, 0.5)</p>
+
+   <br><hr>
+
+   <h2>text-decoration : 텍스트에 줄을 긋거나 줄을 없앨 때 사용</h2>
+   <pre>
+      선택자 {
+         text-decoration: none | underline | overline | line-through;
+      }
+   </pre>
+
+   <ul>
+      <li id="td1">텍스트 영역 아래 줄긋기 : underline</li><br>
+      <li id="td2">텍스트 영역 중간에 줄긋기 : line-through</li><br>
+      <li id="td3">텍스트 영역 위에 줄긋기 : overline</li><br>
+   </ul>
+
+   <a href="text.deco" target="_blank" style="text-decoration: none;">줄 삭제</a>
+
+   <br><br><hr>
+
+   <h3>text-align : 텍스트 정렬할 때 사용</h3>
+   <pre>
+      선택자 {
+         text-align: left(기본값) | right | center | justify
+      }
+   </pre>
+
+   <h4>left : 왼쪽 정렬(기본값)</h4>
+   <p style="text-align: left;">
+      - 배운것들을 활용하여 하나의 서비스를 만드는 완성된 팀프로젝트를 목표로 합니다.<br>
+      - 팀프로젝트의 중요성은 단순한 결과물이 아닌 협업을 통한 결과물을 의미합니다.<br>
+      - 모든 구성원이 서로의 코드를 이해하고 동작방식을 설명할 수 있어야합니다.<br>
+      - 어떠한 문제를 해결하거나 편의성을 높여주는 서비스 또는 이미 출시되어 있는 서비스에 불편한 점을 개선하는 서비스를 만들어야 합니다.<br>
+   </p>
+
+   <h4>right : 오른쪽 정렬</h4>
+   <p style="text-align: right;">
+      - 배운것들을 활용하여 하나의 서비스를 만드는 완성된 팀프로젝트를 목표로 합니다.<br>
+      - 팀프로젝트의 중요성은 단순한 결과물이 아닌 협업을 통한 결과물을 의미합니다.<br>
+      - 모든 구성원이 서로의 코드를 이해하고 동작방식을 설명할 수 있어야합니다.<br>
+      - 어떠한 문제를 해결하거나 편의성을 높여주는 서비스 또는 이미 출시되어 있는 서비스에 불편한 점을 개선하는 서비스를 만들어야 합니다.<br>
+   </p>
+
+   <h4>center : 가운데 정렬</h4>
+   <p style="text-align: center;">
+      - 배운것들을 활용하여 하나의 서비스를 만드는 완성된 팀프로젝트를 목표로 합니다.<br>
+      - 팀프로젝트의 중요성은 단순한 결과물이 아닌 협업을 통한 결과물을 의미합니다.<br>
+      - 모든 구성원이 서로의 코드를 이해하고 동작방식을 설명할 수 있어야합니다.<br>
+      - 어떠한 문제를 해결하거나 편의성을 높여주는 서비스 또는 이미 출시되어 있는 서비스에 불편한 점을 개선하는 서비스를 만들어야 합니다.<br>
+   </p>
+
+   <h4>justify : 양쪽 정렬</h4>
+   <p style="text-align: justify;">
+      - 배운것들을 활용하여 하나의 서비스를 만드는 완성된 팀프로젝트를 목표로 합니다.<br>
+      - 팀프로젝트의 중요성은 단순한 결과물이 아닌 협업을 통한 결과물을 의미합니다.<br>
+      - 모든 구성원이 서로의 코드를 이해하고 동작방식을 설명할 수 있어야합니다.<br>
+      - 어떠한 문제를 해결하거나 편의성을 높여주는 서비스 또는 이미 출시되어 있는 서비스에 불편한 점을 개선하는 서비스를 만들어야 합니다.<br>
+   </p>
+
+   <br><hr>
+
+   <h3>line-height : 줄 간격 조절할 때 사용</h3>
+   <pre>
+      선택자 {
+         line-height: normal | px | em | %;
+      }
+   </pre>
+
+   <h4>px 고정단위 간격</h4>
+   <p style="line-height: 30px;">
+      - 8월 26일 ~ 8월 31일 : 아이디어 도출 및 조율<br>
+      - 9월 2일 ~ 9월 6일  : 서비스 기획, ui구상, erd 구조 작성<br>
+      - 9월 9일 ~ 9월 12일  : 기획및 ui정리 후 발표자료준비<br>
+      - 9월 13일 : 기획발표<br>
+      - 9월 13일 ~ 9월 25일: 1차 핵심서비스 개발<br>
+      - 9월 25일 ~ 10월 8일: 2차 추가기능개발<br>
+      - 10월 8일 ~ 10월 10일 : 프로젝트 검수 및 테스트<br>
+      - 10월 11일 :  ~ 파일제출 및 발표준비<br>
+      - 10월 14일 : 최종발표<br>
+   </p>
+</body>
+</html>

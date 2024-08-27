@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>레이아웃 스타일</title>
+
+   <style>
+      .size-test {
+         border: 1px solid palevioletred;
+      }
+
+      #test1 {
+         width: 400px;
+         height: 200px;
+      }
+
+      #test2 {
+         width: calc(100% - 100px);
+         height: 150px;
+      }
+
+      .display-test {
+         border: 1px solid rebeccapurple;
+         width: 150px;
+         height: 150px;
+      }
+
+      .pink { background-color: pink; }
+      .chocolate { background-color: chocolate; }
+      .bisque { background-color: bisque; }
+
+      .inline { display: inline; }
+      .inline-block { display: inline-block; };
+      .block { display: block; }
+   </style>
+</head>
+<body>
+   <!--
+      블럭 요소 : 한 줄로 영역을 차지하고 있는 요소 / 줄 바꿈 발생 (div, p, pre, h 등)
+      인라인 요소: content 부분만 영역을 차지하고 있는 요소 / 옆으로 다른 요소가 올 수 있음 (span, lable, input, img, 글자 등)
+
+      *요소 : content + padding + border
+      요소 바깥쪽 영역 : margin
+   -->
+   <h1>레이아웃 관련 스타일</h1>
+
+   <h3>width, height</h3>
+   <p>기본적으로 내용을 차지하는 content 영역의 가로, 세로 길이를 조정하는데 사용하는 스타일</p>
+
+   <h4>고정 크게(px)</h4>
+   <div class="size-test" id="test1"></div>
+
+   <h4>가변 크기(%)</h4>
+   <div class="size-test" id="test2"></div>
+
+   <!-- calc(xx% - xxpx)-->
+
+   <br><hr>
+
+   <h3>display : 화면 배치 방법 변경</h3>
+   <pre>
+      선택자 {
+         display: inline | block | inline-block;   
+      }
+   </pre>
+
+   <h4>display : inline</h4>
+   <div class="display-test pink inline">첫 번째</div>
+   <div class="display-test chocolate inline">두 번째</div>
+   <div class="display-test bisque inline">세 번째</div>
+   <!-- inline 요소는 크기 조절X -->
+
+   <h4>display : inline-block</h4>
+   <div class="display-test pink inline-block">첫 번째</div>
+   <div class="display-test chocolate inline-block">두 번째</div>
+   <div class="display-test bisque inline-block">세 번째</div>
+</body>
+</html>

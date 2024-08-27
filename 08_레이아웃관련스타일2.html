@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>레이아웃 관련 스타일2</title>
+
+   <style>
+      .positioning { border: 1px solid darkorange; }
+
+      .outer {
+         position: relative;  /* 기준 */
+         border: 1px solid blueviolet;
+      }
+
+      #first {
+         width: 300px;
+         height: 300px;
+         background-color: yellowgreen;
+      }
+
+      #second {
+         width: 200px;
+         height: 200px;
+         background-color: yellow;
+         position: absolute;  /* 내가 원하는 위치에 두기 */
+         top: 50px;
+         left: 50px;
+         /* position: relatice;로 세팅된 부모 요소로부터 위쪽에서 50px, 왼쪽에서 50px 만큼 떨어진 위치에 자리한다. */
+      }
+
+      #third {
+         background-color: brown;
+         width: 100px;
+         height: 100px;
+         position: absolute;
+         top: 100px;
+         left: 100px;
+      }
+
+      #fixed-area {
+         width: 100px;
+         height: 100px;
+         background-color: darkslategrey;
+         position: fixed;
+         right: 20px;
+         bottom: 100px;
+      }
+
+      .vis-test {
+         width: 200px;
+         height: 100px;
+      }
+
+      .float-test {
+         width: 70px;
+         height: 30px;
+         border: 1px solid forestgreen;
+         float: left;
+      }
+
+      .both {
+         display: block;
+      }
+   </style>
+</head>
+<body>
+   <h1>배치 관련 스타일</h1>
+   <h3>position : 상대위치(relative)와 절대위치(absolute)</h3>
+   <p>부모의 position이 relative면 자식 요소들의 기준점이 된다.</p>
+
+   <div class="outer">
+      <div class="positioning" id="first">첫 번째 자식</div>
+      <div class="positioning" id="second">두 번째 자식</div>
+      <div class="positioning" id="third">세 번째 자식</div>
+   </div>
+
+   <br><hr>
+
+   <h3>position : 고정위치(fixed)</h3>
+   <div class="positioning" id="fixed-area"></div>
+
+   <br><hr>
+
+   <h3>visivility : 특정 요소를 보이거나 보이지 않게 하는 스타일 속성</h3>
+   <div class="vis-test" style="background-color: gold; opacity: 0;">첫 번째 영역</div>
+   <div class="vis-test" style="background-color: khaki; display: none;">두 번째 영역</div>
+   <div class="vis-test" style="visibility: hidden;">세 번째 영역</div>
+
+   <br><hr>
+
+   <h3>float</h3>
+   <p>페이지 내의 요소들을 띄워서 화면으로부터 왼쪽 또는 오른쪽으로 배치하는 속성</p>
+
+   <div class="float-test">요소1</div>
+   <div class="float-test">요소2</div>
+   <div class="float-test">요소3</div>
+   <div class="float-test">요소4</div>
+   <div class="float-test">요소5</div>
+
+   <br class="both">
+   <hr>
+</body>
+</html>

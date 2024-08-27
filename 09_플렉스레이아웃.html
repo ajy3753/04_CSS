@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      .container {
+         border: 2px solid salmon;
+         display: flex;
+         flex-direction: row;
+      }
+
+      .flex-item {
+         font-size: 50px;
+         padding: 24px;
+         text-align: center;
+         border: 1px solid darkcyan;
+         width: 100px;
+         flex: 1;
+      }
+
+      .item1 { background-color: rgb(255, 71, 126); }
+      .item2 { background-color: aquamarine;}
+      .item3 { background-color: rgb(255, 241, 52); }
+      .item4 { background-color: rgb(102, 169, 233); }
+      .item5 { background-color: rgb(223, 176, 230); }
+      .item6 { background-color: rgb(95, 206, 114); }
+
+      .container2 {
+         border: 3px solid darkmagenta;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         /* 주축의 정렬을 어떻게 할 것인가 : justify-content */
+         justify-content: center;
+         align-items: center;
+      }
+
+      .flex-item2 {
+         font-size: 50px;
+         padding: 24px;
+         text-align: center;
+         border: 1px solid teal;
+         width: 100px;
+      }
+   </style>
+</head>
+<body>
+   <h1>Flex 레이아웃</h1>
+   <p>웹페이지 레이아웃을 효율적으로 구성하기 위한 기술, flexbox를 사용하면 요소들을 부모 컨테이너에서 유언하게 정렬하게 배치할 수 있다.</p>
+
+   <h3>flex-direction</h3>
+   <pre>
+      선택자 {
+         display: flex;
+         flex-direction: colum(수직) | colum-reverse | row(수평) | row-revers; 
+      }
+   </pre>
+
+   <div class="container">
+      <div class="flex-item item1">1번</div>
+      <div class="flex-item item2">2번</div>
+      <div class="flex-item item3">3번</div>
+   </div>
+
+   <br><br><br>
+
+   <h3>justify-content : 주축 정렬, align-items : 교차축 정렬</h3>
+   <pre>
+      선택자 {
+         display: flex;
+         justify-content: flex-start | center | space-around | space-between | flex-end | evenly;
+         align-items: center;
+      }
+   </pre>
+
+   <div class="container2">
+      <div class="flex-item2 item1">1번</div>
+      <div class="flex-item2 item2">2번</div>
+      <div class="flex-item2 item3">3번</div>
+      <div class="flex-item2 item4">4번</div>
+      <div class="flex-item2 item5">5번</div>
+      <div class="flex-item2 item6">6번</div>
+   </div>
+</body>
+</html>
