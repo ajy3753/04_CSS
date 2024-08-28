@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
-<html lang=ko">
+<html lang="ko">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,46 +19,65 @@
 
       /* 화면 전체를 감싸는 div */
       .wrap {
-         width: 100%;
-         min-height: 500px;
+         width: 1000px;
          height: 800px;
+         margin: auto;
       }
 
+      /* hearder, content, footer */
       .wrap > div {
          width: 100%;
       }
 
-      #header, #footer {
-         height: 150px;
+      #header, #footer, #aside {
+         height: 20%;
          background-color: #e3ffc3;
       }
 
-      #content {
-         min-height: 200px;
-         height: calc(100% -300px);
+      #navigator {
+         height: 5%;
       }
 
-      #content > div {
+      #content {
+         height: 55%;
+      }
+
+      #header > div, #content > div {
+         height: 100%;
          float: left;
       }
 
-      #content1 {
-         width: 150px;
-      }
+      /* header 영역 나누기 */
+      #header_1 { width: 20%; }
+      #header_2 { width: 65%; }
+      #header_3 { width: 15%; }
 
-      #content2 {
-         width: calc(100% - 150px);
-      }
+      /* content 영역 나누기 */
+      #content_1 { width: 20%; }
+      #content_2 { width: 65%; }
+      #content_3 { width: 15%; }
+
+      #aside_1 { width: 40%; }
+      #aside_2 { width: 60%; }
    </style>
 </head>
 <body>
    <div class="wrap">
-      <div id="header"></div>
+      <div id="header">
+         <div id="header_1"></div>
+         <div id="header_2"></div>
+         <div id="header_3"></div>
+      </div>
+
       <div id="content">
-         <div id="content1"></div>
-         <div id="content2"></div>
+         <div id="content_1"></div>
+         <div id="content_2"></div>
+         <div id="content_3"></div>
       </div>
    </div>
-   <div id="footer"></div>
+
+   <div id="footer">
+
+   </div>
 </body>
 </html>
