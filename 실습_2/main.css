@@ -1,0 +1,238 @@
+body {
+   display: flex;
+   margin: 0;
+   padding: 0;
+   background-color: black;
+   color: white;
+}
+
+div, input, button {
+   box-sizing: border-box;
+}
+
+ul, li, ol {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+}
+
+button {
+   background-color: rgba(0, 0, 0, 0);
+   cursor: pointer;
+}
+
+/* 왼쪽 사이드 바 */
+#sideBar {
+   width: 80px;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+#sideBar > ul {
+   width: 50%;
+   height: 45%;
+   min-height: 300px;
+   margin-top: 10%;
+}
+
+#sideBar > ul > li {
+   height: 20%;
+   max-height: 75px;
+   text-align: center;
+}
+
+#sideBar > ul > li > a > img {
+   height: 50%;
+}
+
+/* 메인 컨텐츠 영역 */
+#main {
+   width: calc(100% - 80px);
+   min-width: 1000px;
+}
+
+#main > div {
+   width: 100%;
+}
+
+#header {
+   height: 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#header > * {
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+
+#logo {
+   width: 10%;
+}
+
+#logo > a > img {
+   width: 100%;
+   height: 100%;
+}
+
+#search {
+   width: 50%;
+   justify-content: center;
+}
+
+#search > * {
+   height: 75%;
+}
+
+#search > input {
+   width: 70%;
+   border: 0.13vw solid rgb(73, 73, 73);
+   border-radius: 3vw 0 0 3vw;
+   background-color: rgb(17, 17, 17);
+   padding: 0 3%;
+   font-size: 12px;
+   color: white;
+}
+
+#search > input:focus {
+   outline: none;
+}
+
+#search > button {
+   width: 9%;
+   border: 0.13vw solid rgb(73, 73, 73);
+   border-radius: 0 3vw 3vw 0;
+   background-color: rgb(73, 73, 73);
+}
+
+#search > button > img {
+   width: 50%;
+   height: 100%;
+   margin: auto;
+}
+
+#search > button:last-child {
+   max-width: 40px;
+   border-radius: 2vw;
+   margin-left: 1%;
+}
+
+#search > button:last-child > img {
+   width: 100%;
+}
+
+#mypage {
+   width: 10%;
+   margin-right: 2%;
+}
+
+#mypage > ul {
+   width: 100%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+#mypage > ul > li {
+   width: 25%;
+}
+
+#mypage > ul > li > a > img {
+   width: 100%;
+   max-width: 30px;
+   height: 100%;
+   max-height: 30px;
+}
+
+/* 진짜 메인 컨텐츠 부분 */
+#content {
+   display: flex;
+   justify-content: center;
+}
+
+#content > * {
+   width: 100%;
+   height: 100%;
+}
+
+#videoList {
+   display: flex;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   gap: 1%;
+}
+
+#videoList > li {
+   width: 23%;
+   max-width: 720px;
+   min-width: 280px;
+   height: auto;
+   max-height: 300px;
+   margin-bottom: 3%;  
+}
+
+#videoList > li > a > div {
+   width: 100%;
+}
+
+#thumb {
+   height: 70%;
+}
+
+#thumb > img {
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+}
+
+#title {
+   height: 30%;
+   display: flex;
+   margin-top: 2%;
+   padding: 1%;
+}
+
+#title > * {
+   height: 100%;
+}
+
+#user {
+   width: 15%;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+#user > img {
+   width: 100%;
+   max-width: 40px;
+}
+
+#info {
+   width: 83%;
+   padding-left: 1%;
+}
+
+#info > * {
+   margin: 0;
+}
+
+#info > h3 {
+   font-size: 13pt;
+   color: white;
+}
+
+#info > p {
+   margin-top: 2%;
+   color: rgb(158, 158, 158);
+}
